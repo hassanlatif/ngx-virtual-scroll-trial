@@ -1,14 +1,17 @@
 <div class="gallery">
 
-  <cdk-virtual-scroll-viewport [itemSize]="3" class="gallery-wrap">
+  <div class="gallery-wrap">
 
     <div class="gallery-items">
 
-      <gallery-img *cdkVirtualFor="let item of items; templateCacheSize: 0;" class="gallery-item" [item]="item">
+      <gallery-img *ngFor="let item of items;" 
+          class="gallery-item" 
+          [item]="item">
       </gallery-img>
 
+      
     </div>
 
-  </cdk-virtual-scroll-viewport>
+  </div>
 
 </div>

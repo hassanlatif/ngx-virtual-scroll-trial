@@ -8,17 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 export class GalleryImgComponent implements OnInit {
 
   @Input() item: any;
-  private index;
+  public index;
 
   constructor() {
 
   }
 
   ngOnInit() {
-    // console.log(this.item); 
-    this.index = this.item % 3;
-    console.log(this.index);
-
+    this.index = this.item % 4;
   }
 
 }
