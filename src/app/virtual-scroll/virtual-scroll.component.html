@@ -1,17 +1,13 @@
-<div class="gallery">
 
-  <div class="gallery-wrap">
+<virtual-scroller #scroll [items]="items" (vsUpdate)="fetchMore($event)">
 
-    <div class="gallery-items">
+  <div class="gallery-items" #container>
 
-      <gallery-img *ngFor="let item of items;" 
-          class="gallery-item" 
-          [item]="item">
-      </gallery-img>
-
-      
-    </div>
+    <gallery-img *ngFor="let item of scroll.viewPortItems;"
+    [item]="item"
+    class="gallery-item">
+    </gallery-img>
 
   </div>
 
-</div>
+</virtual-scroller>

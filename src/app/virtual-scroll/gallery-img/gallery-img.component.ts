@@ -16,6 +16,8 @@ export class GalleryImgComponent implements OnInit {
 
   ngOnInit() {
     this.index = this.item % 4;
+    console.log(this.index);
+    
   }
 
 }

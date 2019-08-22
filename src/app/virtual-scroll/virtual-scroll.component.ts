@@ -7,17 +7,24 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class VirtualScrollComponent implements OnInit {
 
-  items: number[]= [];
+  public items: number[]= [];
+  public viewPortItems: any;
 
   constructor() {
 
-    for (let index = 0; index < 1000; index++) {
+    for (let index = 0; index < 100; index++) {
       this.items.push(index);
     }
 
   }
 
   ngOnInit() {
+
+  }
+
+  fetchMore(event) {
+
+    console.log(event);
 
   }
 
